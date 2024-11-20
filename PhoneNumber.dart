@@ -4,7 +4,7 @@ class PhoneNumber{
     String num = number.replaceAll(RegExp(r'([()\s-.+])'), '');
 
     //Does the phone number have letters?
-    if (num.contains(RegExp(r'[a-z]'))){
+    if (num.contains(RegExp(r'[a-zA-Z]'))){
       throw FormatException('Letters are not allowed');
     } else if (num.contains(RegExp(r'[^\w]+'))){
       throw FormatException('Punctuation is not permitted.');
